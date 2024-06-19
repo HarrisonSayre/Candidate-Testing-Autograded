@@ -13,6 +13,7 @@ question = "Who was the first American woman in space? ";
 let correctAnswer;
 correctAnswer = "Sally Ride";
 let candidateAnswer;
+candidateAnswer = "";
 
 
 //TODO: Variables for Part 2
@@ -23,10 +24,9 @@ let candidateAnswers;
 
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
-  //Use console.log to print a prompt, 
-  console.log("Please enter your name: ")
-  //Use realine-sync's input.question() to ge the input then assigns that value to candidateName
-  candidateName = input.question();
+  //Use realine-sync's input.question() to ge the input then assigns that value to candidateName.
+  //Formerly blank question and console.log() acually asking it but only using one prettier/more elegant.
+  candidateName = input.question("Please enter your name: ")
 
   //Print the user's name. For testing purposes.
   //console.log("Your name is: "+candidateName);
@@ -36,6 +36,7 @@ function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
   console.log(question);
   candidateAnswer = input.question();
+  console.log(typeof(candidateAnswer));
   //Print the candidate's answer. For testing purposes.
   //console.log(candidateAnswer);
 
@@ -46,12 +47,14 @@ function gradeQuiz(candidateAnswers) {
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
 
   //Before comparing get rid of trailing spaces from user's answer. Make both answers upper case to make comparison case insensitive.
+
   if(candidateAnswer.trim().toUpperCase() === correctAnswer.toUpperCase()){
     console.log("Correct!");
   } else{
     console.log("Incorrect!");
   }
 
+  console.log(typeof(candidateAnswer));
   let grade;  //TODO 3.2 use this variable to calculate the candidates score.
 
 
@@ -66,7 +69,8 @@ function runProgram() {
   gradeQuiz(this.candidateAnswers);
 }
 
-runProgram();
+//For personal testing.
+//runProgram();
 
 // ----------- Don't write any code or change any code below this line ---------- //
 module.exports = {
