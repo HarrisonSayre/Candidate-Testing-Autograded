@@ -9,7 +9,6 @@ let candidateName;
 candidateName = "";
 
 // TODO 1.2a: Define question, correctAnswer, and candidateAnswer //
-//Should some of these be commented out now? Don't think so for tests 1-6 purposes.
 let question;
 question = "Who was the first American woman in space? ";
 let correctAnswer;
@@ -28,7 +27,7 @@ questions = ["Who was the first American woman in space? ", "True or false: 5 ki
 let correctAnswers; 
 // And answers
 correctAnswers = ["Sally Ride", "true", "40", "Trajectory", "3"];
-// Stores user input
+// Stores the user's input
 let candidateAnswers;
 candidateAnswers = [];
 
